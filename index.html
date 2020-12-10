@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Visual Timer </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href = "style.css" rel = "stylesheet">
+	</head>
+	<body>
+		
+		<div id = "mainwrapper">
+			<canvas id ="can" ></canvas>
+			<a id = "time"></a>
+		</div>
+		<div id = "inputs">
+			<div style = "">
+				<input type="number" min="0" step="1" style = "width: 1.5em;" value="0" id = "m" oninput="validity.valid||(value='');">:
+				<input type = "number" style = "width: 1.5em;" value="30" id = "s" min="0" step = "1" max = "59" oninput="validity.valid||(value='');"><br>
+				<button class = "btn" onclick="countdown();">Countdown!</button>
+			</div>
+		</div>
+		
+		<script src = "js.js"></script>
+	</body>
+	
+</html>
