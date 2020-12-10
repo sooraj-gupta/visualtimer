@@ -63,9 +63,17 @@ function draw()
 	c.strokeStyle = "#000";
 	c.lineWidth = 10;
 	c.strokeRect( w/2 - defaultWidth/2 , 20, defaultWidth , defaultHeight);
-	document.getElementById( "time").innerHTML = m + ":" + s;
+	document.getElementById( "time").innerHTML =  m + ":" + toString( s );
 }
 
+function toString( num )
+{
+	if( num < 10 )
+	{
+		return "0" + num;
+	}
+	return "" + num;
+}
 draw();
 setInterval( move, 1000 );
 setInterval( draw, 200 );
